@@ -9,7 +9,7 @@ from utils import decrypt
 
 def single_download():
     # single_url = input("请输入视频的播放网址:")
-    single_url = 'https://ke.qq.com/webcourse/426365/100558401#taid=4161995108942205&vid=5285890806942962013'
+    single_url = 'https://ke.qq.com/webcourse/426365/100558401#taid=9983922062918013&vid=5285890787905816125'
     cookies = get_cookie()
     get_video(single_url, outputFilePath,cookies)
 
@@ -74,12 +74,7 @@ def main():
         else:
             print("输入有误，请重新输入")
 
-# key 和 iv 获取方式：source 文件中找到 如下文件
-# https://cdn-cos-ke.myoed.com/ke_proj/webcourse/assets/js/lib_fd2a4cb1.js
-# 搜索 decryptkey 
-# js 控制台解码 
-# hexArray = Array.from(new Uint8Array(e.data), byte => byte.toString(16).padStart(2, '0')).map(hex => parseInt(hex, 16))
-# btoa(String.fromCharCode.apply(null, hexArray)) 得到 base64 key
+# key 和 iv 需要自行查找，
 
 if __name__ == '__main__':
     global outputFilePath
